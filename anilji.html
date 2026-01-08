@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>QR Code — Spare House</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden; /* Prevents scrollbars */
+        background-color: #000; /* Optional: adds a background color */
+      }
+
+      .fullscreen-rotated-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* We swap width and height because of the 90deg rotation */
+        width: 100vh;
+        height: 100vw;
+        transform: translate(-50%, -50%) rotate(90deg);
+
+        /* THIS PREVENTS CUTTING */
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="assets/images/nye.jpeg" alt="Spare House QR Code" class="fullscreen-rotated-image" />
+  </body>
+</html>
